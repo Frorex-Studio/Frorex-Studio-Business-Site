@@ -1,0 +1,62 @@
+@import '@/scss/variables.scss';
+
+.navbar {
+    padding: 16px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+
+    span,
+    a {
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__talk {
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__circle {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background-color: $primary-500;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

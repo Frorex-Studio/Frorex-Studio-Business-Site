@@ -1,0 +1,60 @@
+@import '@/scss/variables.scss';
+
+.header {
+    background-color: $color-bg-secondary;
+    padding-bottom: 160px;
+
+    p {
+        font-size: 24px;
+        line-height: 42px;
+    }
+
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        margin-top: 60px;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+
+            span {
+                color: $primary-500;
+            }
+
+            &__tags {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                &__item {
+                    padding: 16px 32px;
+                    border: 1px solid $white;
+                    border-radius: 999px;
+                    color: $white;
+                }
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            max-width: 436px;
+            width: 100%;
+
+            a {
+                padding: 16px 32px;
+                background-color: $white;
+                border-radius: 999px;
+                width: max-content;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
