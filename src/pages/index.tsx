@@ -9,7 +9,7 @@ import styles from '@/styles/Home.module.scss'
 import Header from '@/components/Header'
 
 //dictionary
-import { services, achievements, audiences } from '@/dictionary'
+import { services, achievements } from '@/dictionary'
 
 //icons
 import ArrowRight from '@/assets/icons/arrow-right.svg'
@@ -118,11 +118,11 @@ const Home: React.FC = () => {
                                 and propel you towards success.
                             </p>
                             <ul>
-                                {audiences.map((audience, index) => (
+                                {/* {audiences.map((audience, index) => (
                                     <li>
                                         <Link href='#'></Link>
                                     </li>
-                                ))}
+                                ))} */}
                             </ul>
                         </div>
                     </div>

@@ -4,8 +4,8 @@ import Link from 'next/link'
 import styles from './Navbar.module.scss'
 
 //icons
-import LogoIcon from '@/assets/icons/logo.svg'
-import EditIcon from '@/assets/icons/edit.svg'
+import LogoIcon from '../Icons/logo'
+import EditIcon from '../Icons/edit'
 
 const Navbar: React.FC = () => {
     const menu = [
