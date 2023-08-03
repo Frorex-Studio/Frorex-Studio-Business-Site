@@ -1,23 +1,34 @@
 import { Michroma } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 //styles
 import styles from '@/styles/Home.module.scss'
 
 //components
 import Header from '@/components/Header'
+import Tab from '@/components/Tab'
+import ProjectCard from '@/components/ProjectCard'
 
 //dictionary
-import { services, achievements, audiences } from '@/dictionary'
+import { services, achievements, audiences, socials } from '@/dictionary'
 
 //icons
 import ArrowRight from '@/assets/icons/arrow-right.svg'
-
+import Radio from '@/components/Radio'
+import Checkbox from '@/components/Checkbox'
 
 const michroma = Michroma({ subsets: ['latin'], weight: ['400'] })
 
 const Home: React.FC = () => {
+    const sidebarMenu = [
+        'All', 'Website', 'Mobile App',
+        'UX / UI', 'Poster', 'Social Media'
+    ];
+
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
         <div className={styles.home}>
             <Header
@@ -119,12 +130,82 @@ const Home: React.FC = () => {
                             </p>
                             <ul>
                                 {audiences.map((audience, index) => (
-                                    <li>
-                                        <Link href='#'></Link>
+                                    <li key={index}>
+                                        <Link href={audience.href}>
+                                            {audience.icon}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
+                    </div>
+                </section>
+                <section className={styles.home__projects}>
+                    <div className={styles.home__projects__wrapper}>
+                        <div className={styles.home__projects__head}>
+                            <h2>Our Projects</h2>
+                            <div className={styles.home__projects__head__text}>
+                                <h3 className={michroma.className}>
+                                    At our Digital Product Design Studio,
+                                    we take pride in our portfolio of successful projects across different industries.
+                                </h3>
+                                <p>
+                                    We are passionate about delivering outstanding results that exceed client expectations.
+                                    Contact us today to discuss your project and join our list of satisfied clients.
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.home__projects__main}>
+                            <ul>
+                                {sidebarMenu.map((item, index) => (
+                                    <li key={index}>
+                                        <Tab
+                                            title={item}
+                                            active={index === activeTab}
+                                            onClick={() => setActiveTab(index)}
+                                        />
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className={styles.home__projects__main__list}>
+                                {[...Array(6)].map((_, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        title='Vurrie Studio'
+                                        tags={['UX / UI', 'Web Development']}
+                                        date='Oct 28, 2023'
+                                        imageUrl={'/card.png'}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={styles.home__contact}>
+                    <div className={styles.home__contact__wrapper}>
+                        <div className={styles.home__contact__head}>
+                            <h3 className={michroma.className}>Together let's work</h3>
+                            <div className={styles.home__contact__head__socials}>
+                                <Link
+                                    className={styles.home__contact__head__socials__mail}
+                                    href={'mailto:frorex.studio@gmail.com'}
+                                >
+                                    frorex.studio@gmail.com
+                                </Link>
+                                <ul>
+                                    {socials.map((social, index) => (
+                                        <li key={index}>
+                                            <Link href={social.href}>
+                                                {social.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <form className={styles.home__contact__form}>
+                                        
+                        </form>
                     </div>
                 </section>
             </div>

@@ -63,3 +63,13 @@ export const audiences = [
     { icon: <EMopIcon />, href: '#' },
     { icon: <ChangingEducationIcon />, href: '#' }
 ]
+
+export const socials = [
+    { title: 'Facebook', href: '' },
+    { title: 'Instagram', href: '' },
+    { title: 'Youtube', href: '' },
+    { title: 'Telegram', href: '' },
+    { title: 'Behance', href: '' },
+    { title: 'Dribble', href: '' },
+    { title: 'Awwwards', href: '' }
+]
