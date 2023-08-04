@@ -1,8 +1,9 @@
-import { Michroma } from 'next/font/google'
 import Image from 'next/image'
+import { michroma } from '@/pages'
 
 //styles
 import styles from './ProjectCard.module.scss'
+
 
 type ProjectCardProps = {
     title: string,
@@ -11,7 +12,6 @@ type ProjectCardProps = {
     tags: string[]
 }
 
-const michroma = Michroma({ subsets: ['latin'], weight: ['400'] })
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, date, imageUrl, tags }) => {
     return (

@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { Michroma } from 'next/font/google'
+import { michroma } from '@/pages'
 
 //styles
 import styles from './Header.module.scss'
 
 //components
 import Navbar from '../Navbar'
+
 
 export type THeaderProps = {
     variant: 'primary' | 'secondary',
@@ -14,7 +15,6 @@ export type THeaderProps = {
     tags?: string[]
 }
 
-const michroma = Michroma({ subsets: ['latin'], weight: ['400'] });
 
 const Header: React.FC<THeaderProps> = ({ variant, title, text, tags }) => {
     return (

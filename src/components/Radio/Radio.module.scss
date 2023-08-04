@@ -22,9 +22,9 @@
                 top: 0;
                 width: 20px;
                 height: 20px;
-                border: 2px solid $primary-500;
+                border: 1px solid $grey-300;
                 border-radius: 100%;
-                background: $primary-300;
+
             }
 
             &::after {
@@ -47,9 +47,16 @@
             transform: scale(0);
         }
 
-        &:checked+label::after {
-            opacity: 1;
-            transform: scale(1);
+        &:checked+label {
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            &::before {
+                background: $primary-300;
+                border: 2px solid $primary-500;
+            }
         }
     }
 }

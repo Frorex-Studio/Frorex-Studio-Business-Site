@@ -22,9 +22,8 @@
                 top: 0;
                 width: 20px;
                 height: 20px;
-                border: 2px solid $primary-500;
+                border: 2px solid $grey-300;
                 border-radius: 8px;
-                background: $primary-300;
             }
 
             &::after {
@@ -47,9 +46,16 @@
             transform: scale(0);
         }
 
-        &:checked+label::after {
-            opacity: 1;
-            transform: scale(1);
+        &:checked+label {
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            &::before {
+                border: 2px solid $primary-500;
+                background: $primary-300;
+            }
         }
     }
 }

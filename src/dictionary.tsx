@@ -73,3 +73,22 @@ export const socials = [
     { title: 'Dribble', href: '' },
     { title: 'Awwwards', href: '' }
 ]
+
+export const budgets = [
+    '<6 900 $',
+    'about 14 000 $',
+    '14 - 42 000 $',
+    '55-65 000 $',
+    '>65 000 $',
+    'Do not know'
+]
+
+export const servicesForm = [
+    'Corporate website',
+    'Apps',
+    'Landing page',
+    'Online store',
+    'System / Service',
+    'Design support',
+    'Graphic design'
+]

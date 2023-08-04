@@ -1,19 +1,19 @@
-import { InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes, forwardRef } from 'react'
 
 //styles
 import styles from './Radio.module.scss'
 
-interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+interface IRadioProps extends InputHTMLAttributes<HTMLInputElement> {
     title: string
 }
 
-const Radio: React.FC<RadioProps> = ({ title, ...props }) => {
+const Radio = forwardRef<HTMLInputElement, IRadioProps>(({ title, ...props }, ref) => {
     return (
         <div className={styles.radio}>
-            <input type="radio" id={title} {...props} />
+            <input type="radio" id={title} ref={ref} {...props} />
             <label htmlFor={title}>{title}</label>
         </div>
     )
-}
+})
 
 export default Radio

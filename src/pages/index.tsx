@@ -18,8 +18,9 @@ import { services, achievements, audiences, socials } from '@/dictionary'
 import ArrowRight from '@/assets/icons/arrow-right.svg'
 import Radio from '@/components/Radio'
 import Checkbox from '@/components/Checkbox'
+import ContactForm from '@/components/ContactForm'
 
-const michroma = Michroma({ subsets: ['latin'], weight: ['400'] })
+export const michroma = Michroma({ subsets: ['latin'], weight: ['400'] })
 
 const Home: React.FC = () => {
     const sidebarMenu = [
@@ -203,9 +204,7 @@ const Home: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                        <form className={styles.home__contact__form}>
-                                        
-                        </form>
+                        <ContactForm />
                     </div>
                 </section>
             </div>

@@ -1,0 +1,28 @@
+@import '@/scss/variables.scss';
+
+.radio {
+    padding: 16px 32px;
+    border-radius: 999px;
+    border: 1px solid $grey-300;
+    cursor: pointer;
+
+    span {
+        font-size: 16px;
+        line-height: 24px;
+        color: $grey-500;
+    }
+
+    input[type="radio"] {
+        display: none;
+        appearance: none;
+        opacity: 0;
+
+        &:checked+span {
+            color: $black;
+        }
+
+        &:checked .radio {
+            border-color: red !important;
+        }
+    }
+}

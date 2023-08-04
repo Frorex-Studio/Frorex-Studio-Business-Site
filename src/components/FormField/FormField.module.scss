@@ -1,0 +1,29 @@
+@import '@/scss/variables.scss';
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    input {
+        color: $black;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid $grey-300;
+        border-radius: 20px;
+
+        &::placeholder {
+            color: $grey-500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    span {
+        padding-left: 16px;
+        color: $error-500;
+        font-size: 14px;
+    }
+}

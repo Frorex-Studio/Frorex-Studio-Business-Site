@@ -17,6 +17,10 @@ button {
     cursor: pointer;
 }
 
+input:focus::placeholder {
+    color: transparent !important;
+}
+
 textarea {
     resize: none;
 }

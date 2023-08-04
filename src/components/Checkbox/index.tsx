@@ -1,19 +1,19 @@
-import { InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes, forwardRef } from 'react'
 
 //styles
 import styles from './Checkbox.module.scss'
 
-interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+interface ICheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
     title: string
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ title, ...props }) => {
+const Checkbox = forwardRef<HTMLInputElement, ICheckboxProps>(({ title, ...props }, ref) => {
     return (
         <div className={styles.checkbox}>
-            <input type='checkbox' id={title} {...props} />
+            <input type='checkbox' id={title} ref={ref} {...props} />
             <label htmlFor={title}>{title}</label>
         </div>
     )
-}
+})
 
 export default Checkbox
